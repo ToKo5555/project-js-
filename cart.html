@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav id="navbar">
+        <a href="./index.html"><img id="mylogo"  src="/images/logo.png" alt=""></a>
+        <ul>
+            <li id="mydis2"><a href="./index.html">Home</a><img class="pizza" src="./images/cheesy-pizza.png" alt=""></li>
+            <a href="./cart.html"><img class="respoimg" src="./images/cart_1.png" alt=""></a>
+            <div class="burgebbarblack">
+           <div class="burger" id="burgerMenu" onclick="toggleSlide()">
+             <div class="line"></div>
+             <div class="line2"></div>
+             <div class="line"></div>
+         </div> 
+         <div class="slide" id="slide"  >
+           <div class="slide2">
+              <img src="./images/logoBlack.png" alt="">
+              <ul>
+               <li><a href="./index.html">Home</a></li>
+               <li><a href="./cart.html">cart</a></li>
+              </ul>
+           </div>
+         </div>
+       </div>
+            <div class="cart-button"><li id="mydis"><a href="./cart.html">Cart</a><img src="./images/moped.png" alt=""></li></div>
+        </ul>
+    </nav>
+    <section id="mysct">
+        <h1>My Cart</h1>
+    </section>
+    <div class="red">
+        <div>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li>/</li>
+                <li><a href="./cart.html"><span>Cart</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <section class="mysct4">
+        <h1>cart</h1>
+        <table> 
+            <thead>
+            <tr class="background2">
+                <th colspan="3" class="mainproduct">Product</th>
+                <th>Qty</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>  
+        </thead> 
+            <tbody id="rows"></tbody>
+        </table>
+        <div id="table2">
+            <div class="totalbolo">
+              <h2 id="sum"><span>Total:</span></h2>
+            <button type="submit">Proceed to Checkout</button>
+            </div>
+          </div>
+    </section>
+  <script src="./cart.js"></script>
+    
+</body>
+</html>

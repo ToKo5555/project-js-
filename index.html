@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav id="navbar">
+      <a href="./index.html"
+        ><img id="mylogo" src="/images/logo.png" alt=""
+      /></a>
+      <ul>
+        <li id="mydis2">
+          <a class="myyellow" href="./index.html">Home</a
+          ><img class="pizza" src="./images/cheesy-pizza.png " alt="" />
+        </li>
+        
+          <a href="./cart.html"><img class="respoimg" src="./images/cart_1.png" alt=""></a>
+           <div class="burgebbarblack">
+          <div class="burger" id="burgerMenu" onclick="toggleSlide()">
+            <div class="line"></div>
+            <div class="line2"></div>
+            <div class="line"></div>
+        </div> 
+        <div class="slide" id="slide"  >
+          <div class="slide2">
+             <img src="./images/logoBlack.png" alt="">
+             <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./cart.html">Cart</a></li>
+             </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart-button">
+          <li id="mydis">
+            <a href="./cart.html">Cart</a
+            ><img src="./images/moped.png" alt="" />
+          </li>
+        </div>
+      </ul>
+    </nav>
+    <section id="mysct">
+      <h1>Fast and efficient, online ordering you must try.</h1>
+    </section>
+    <section>
+      <h1 class="myh1">categories</h1>
+      <ul id="myul">
+        <a href="./index.html"><li id="all">all</li></a>
+      </ul>
+      <div class="borderimgclass">
+        <img id="borderimg" src="./images/copyright_border.png" alt="" />
+      </div>
+    </section>
+    <section id="fullsection">
+      <div class="filter">
+        <div class="filterTop">
+          <p>Filter</p>
+          <i class="fa-solid fa-filter"></i>
+        </div>
+        <div class="filterMid">
+          <div class="rangeBox">
+            <div class="spicinessRange">
+              <label  for="spicinessRange">Spiciness:</label>
+              <span id="spicinessValue">Not Chosen</span>
+            </div>
+            <input class="range2"
+              type="range"
+              id="spicinessRange"
+              min="-1"
+              max="4"
+              step="1"
+              value="-1"
+            />
+          </div>
+          <div class="checkBoxes">
+            <div>
+              <input type="checkbox" id="nuts" value="" />
+              <label for="" class="inputLabel">No Nuts</label>
+            </div>
+            <div>
+              <input type="checkbox" id="vegan" value="" />
+              <label for="">Vegeterian Only</label>
+            </div>
+          </div>
+            <div class="filterbuttons">
+          <button class="reset" id="filterReset" type="reset">
+            RESET
+          </button>
+         
+        <button  id="filterApply" type="submit">
+          APPLY FILTER
+        </button>
+        </div>
+        </div>
+      </div>
+      <div id="filtercard" class="productcard"></div>
+    </section>
+<footer><h4>© Step Ordering 2024, All rights reserved</h4></footer>
+    <script src="./app.js"></script>
+  </body>
+</html>
