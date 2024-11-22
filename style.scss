@@ -26,37 +26,69 @@ body{
         height: 50px;
         background-color: black;
         position: fixed;
-        top: 20px;
         right: 20px;
         border-radius: 5px;
         border: 1px solid white;
         display: none;
         cursor: pointer;
-        z-index: 5;
+        z-index: 13;
     .burger{
     cursor: pointer;
-    z-index: 10;
+    z-index: 13;
     position: fixed;
     top: 30px;
     right: 30px;
     width: 25px;
-    .line {
+     .active .line{
+        transform: translateY(8.65px) rotate(45deg);
+     }
+     .active .line2{
+        opacity: 0;
+     }
+     .active .line{
+        transform: translateY(-8.65px) rotate(-45deg);
+     }
+    .line1 {
         height: 4px;
         width: 100%;
         background-color:#FFCC01;
         margin: 5px 0;
-        transition: all 0.3s ease;
+       transition: 0.5s;
     }
     .line2{
         height: 4px;
         width: 100%;
         background-color:#FFCC01;
         margin: 5px 0;
-        transition: all 0.3s ease;
+        transition: 0.5s;
         position: relative;
         right: 4px;
     }
+    .line3{
+        height: 4px;
+        width: 100%;
+        background-color:#FFCC01;
+        margin: 5px 0;
+        transition: 0.5s;
+       
+    }
+    .line1rotate{
+        margin-top: -1px;
+        transform: translateY(9px)
+         rotate(45deg);
+        transition: 0.5s;
+    }
+    .line2rotate{
+        opacity: 0;
+        transition: 0.5s;
+    }
+    .line3rotate{
+        transform: translateY(-9px)
+        rotate(-45deg);
+        transition: 0.5s;
+    }
      }
+     
     }
      .slide{
         position: fixed;
@@ -70,7 +102,7 @@ body{
         background-size: cover;
         color: white;
         transition: left 0.5s ease; 
-        z-index: 5;
+        z-index: 12;
         padding: 20px;
         display: flex;
         justify-content: center;
@@ -84,16 +116,16 @@ body{
             border-left: 5px black solid;
             border-right: 5px black solid;
             height: 100%;
-            
-            
             ul{
                 display: flex;
                 flex-direction: column;
+                
             }
             a{
                 color: black;
                 font-size: 30px;
                 transition: 0.5s;
+               
             }
             a:hover{
                 color: red;
@@ -101,7 +133,7 @@ body{
             img{
                 position: absolute;
                 top: 20px;
-                left: 80px;
+                left: 100px;
             }
         }
       
@@ -399,15 +431,22 @@ table{
         position: relative;
         font-family: "Arima", system-ui;
     }
+    
+     
     li:hover{
         background-color: red;
         color: white;
     }
+   
     a{
         color: black;
+        text-decoration: none;
+        
     }
-    
-    
+    a:hover{
+        color: white;
+    }
+  
     li:hover::before {
         content: '';
         position: absolute;
@@ -739,6 +778,7 @@ footer::before{
             display: none;
         }
    }
+   
 }
 @media screen and (max-width:770px) {
     body{
@@ -777,6 +817,11 @@ footer::before{
             }
             
         }
-      
+        #mydis2::after{
+            display: none;
+           }
+           .pizza{
+            display: none;
+           }
     }
 }

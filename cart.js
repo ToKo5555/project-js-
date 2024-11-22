@@ -25,7 +25,7 @@ function cartRows(item){
   
     return `   
              <tr class = "background">
-                <td class = "mytd" onclick><i class="fa-solid fa-x" onclick = "deleteX(${item.product.id})"></i> <i class="fa-solid fa-pencil"></i></td>
+                <td class = "mytd" ><i class="fa-solid fa-x" onclick = "deleteX(${item.product.id})"></i> <i class="fa-solid fa-pencil"></i></td>
                 <td><img src= "${item.product.image}"</td>
                 <td class = "mainproductname">${item.product.name}</td>
                 <td><i class="fa-solid fa-circle-plus" onclick = "miumate (${item.price},${item.quantity},${item.product.id})"></i>${item.quantity}<i class="fa-solid fa-circle-minus"onclick = "daaminuse (${item.price},${item.quantity},${item.product.id})"></i></td>
@@ -107,6 +107,18 @@ fetch("https://restaurant.stepprojects.ge/api/Baskets/GetAll")
   
    
 })
+
+let line1 = document.getElementById("line1")
+let line2 = document.getElementById("line2")
+let line3 = document.getElementById("line3")
+let burgerMenu = document.getElementById("burgerMenu")
+burgerMenu.addEventListener("click", function(){
+  line1.classList.toggle("line1rotate")
+  line2.classList.toggle("line2rotate")
+  line3.classList.toggle("line3rotate")
+ 
+});
+
 function toggleSlide() {
   const slide = document.getElementById('slide');
   if (slide.classList.contains('active')) {

@@ -71,7 +71,7 @@ return `
   
 
  function addcart(prodId,prodPrice){
-  console.log(prodPrice);
+  
   let cartinfo = {
     quantity: 1,
     price: prodPrice,
@@ -100,7 +100,7 @@ filterApply.addEventListener("click", function (e) {
     ? (spiciness = spicinessRange.value)
     : (spiciness = "");
   nuts.checked ? (nuts.value = true) : "";
-  vegan.checked ? (vegan.value = true) : "";
+  vegan.checked ? (vegan.value = true , nuts.value = false) : (vegan.value = false,nuts.value = "");
   !nuts.checked ? (nuts.value = "") : (nuts.value = false);
   !vegan.checked ? (vegan.value = "") : (vegan.value = true);
  
@@ -144,10 +144,23 @@ fetch("https://restaurant.stepprojects.ge/api/Products/GetAll")
     
 });
 
-function toggleSlide() {
+let line1 = document.getElementById("line1")
+let line2 = document.getElementById("line2")
+let line3 = document.getElementById("line3")
+let burgerMenu = document.getElementById("burgerMenu")
+burgerMenu.addEventListener("click", function(){
+  line1.classList.toggle("line1rotate")
+  line2.classList.toggle("line2rotate")
+  line3.classList.toggle("line3rotate")
+ 
+})
+
+
+
+function toggleSlide(){
   const slide = document.getElementById('slide');
   if (slide.classList.contains('active')) {
-      slide.classList.remove('active');
+      slide.classList.remove('active')
   } else {
       slide.classList.add('active');
   }
